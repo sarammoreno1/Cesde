@@ -29,7 +29,7 @@ and open the template in the editor.
             else {
                 echo 'Soy mayor';
             }
-            
+            echo "<br>"."<br>";            
             Switch($lenguaje){
                 case "Php":
                     echo 'Php';
@@ -41,18 +41,30 @@ and open the template in the editor.
                     echo 'Html';
                     break;
             }
+            echo "<br>"."<br>"; 
             
-            
+            $arreglo = array (2, "Hola", 5);
+            print_r($arreglo);
+
+            //echo 'arreglo' [1];
             
         ?>
         </h1>
-        <p>
+        <pre>
             <h2>
                 <?php
-                    echo 'Esta es otra sección';
+                    var_dump($arreglo);
+                    //echo 'Esta es otra sección';
+                    echo "<br>"."<br>"; 
+                    $arreglo[] = "Python";
+                    var_dump($arreglo);
+                    
+                    $usuarios = array ('nombre' => 'Juan', "Apellido" => "Zabala", "Cedula" => 1234);
+                    echo "<h1>".$usuarios['nombre']."</h1>";
+                        
                 ?>
             </h2>
             
-        </p>
+        </pre>
     </body>
 </html>
