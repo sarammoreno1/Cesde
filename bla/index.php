@@ -61,8 +61,44 @@ and open the template in the editor.
                     
                     $usuarios = array ('nombre' => 'Juan', "Apellido" => "Zabala", "Cedula" => 1234);
                     echo "<h1>".$usuarios['nombre']."</h1>";
-                        
+                    echo "hola"."<br>";
+                    $existe = in_array("Juan", array_values($usuarios));
+                    var_dump($existe);
+                    //Recorriendo un arreglo con foreach
+                    foreach ($usuarios as $user){
+                        echo"<li>".$user."</li>";
+                    }
+                                        
                 ?>
+                <ul>
+                    <?php
+                    //Utilizando  foreach  para  mostrar  indice  y  valor  del  arreglo  
+                        foreach ($usuarios as $user){
+                            echo "<li>".$user."</li>";
+                        }
+                        
+                        foreach ($usuarios as $key => $user){
+                            
+                            echo "<li>".$key." ".$user."</li>";
+                        }
+                    //Ciclo for
+                        for ($i = 0; $i < 4; $i++){
+                            echo $i;
+                        }
+                    //while
+                        $cont = 0;
+                        while ($cont < 5){
+                            if ($cont ==3){
+                                break;
+                            }
+                        }
+                        $cont++;
+                        
+                    ?>
+                    
+                    
+                </ul>
+                
             </h2>
             
         </pre>
