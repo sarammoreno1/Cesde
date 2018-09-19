@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <h1>
+        <!--<h1>
         <?php
         //Esto e sun comentario
         $PrimeraVariable = "5";
@@ -100,7 +100,48 @@ and open the template in the editor.
                 </ul>
                 
             </h2>
-            
+
         </pre>
+        <pre>
+        //Arreglos indexados en php
+            <?php
+            //Los arreglos empiezan desde la posición cero
+            $lenguaje = ['Html', 'CSS', 'Javascript'];
+            print_r($leguaje);
+            //Se agrega un nuevo elemento
+            $lenguaje [] = "Python";
+            //Borrar el último elemento de array y pone en una variable
+            $Python = array_pop ($lenguaje);
+            echo $python;
+            echo "<br>";
+            //Borrar primer elemento 
+            unset ($lenguaje[0]);
+            //Remover primer elemento y asignarlo a una variable 
+            $CSS = array_shift($lenguaje);
+            
+            echo $css;
+            ?>
+        </pre>-->
+        
+        //Funciones en php
+        <?php
+            function saludar() 
+            {
+                echo "<h2>". "Hola a todos". "</h2>. "<br>";                   
+            }
+          saludar (); //Aquí llamo la función 
+          echo "<br>";
+
+          //Con parametros
+          function usuario($nombre, $tel) 
+            {
+              echo 'Nombre: '.$nombre;
+              echo 'Teléfono: '.$tel;
+            }
+            usuario ("Juan",3485212);
+
+        ?>
+        
+        
     </body>
 </html>
