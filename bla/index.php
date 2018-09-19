@@ -10,7 +10,7 @@ and open the template in the editor.
         <title></title>
     </head>
     <body>
-        <!--<h1>
+        <h1>
         <?php
         //Esto e sun comentario
         $PrimeraVariable = "5";
@@ -121,13 +121,15 @@ and open the template in the editor.
             
             echo $css;
             ?>
-        </pre>-->
+        </pre>
         
+        <pre>
         //Funciones en php
         <?php
+            //Función sin parametros
             function saludar() 
             {
-                echo "<h2>". "Hola a todos". "</h2>. "<br>";                   
+                echo "Hola a todos"."<br>";                   
             }
           saludar (); //Aquí llamo la función 
           echo "<br>";
@@ -139,8 +141,33 @@ and open the template in the editor.
               echo 'Teléfono: '.$tel;
             }
             usuario ("Juan",3485212);
-
+            echo "<br>";
+            
+            //Funcion suma
+            function suma($num1, $num2)
+            {
+                //$sumar = $num1 + $num2;
+                //return $sumar;
+                return $num1+$num2;
+            }
+            $result = suma(2,4);
+                echo "Suma: " . $result . "<br>"; 
+            
+            //Guardando datos en un arreglo mediante una función
+            $agenda = array();
+            function agendar($nombre) 
+            {
+                global $agenda;
+                $agenda [] = $nombre;
+                $agenda [] = $tel;
+            }
+            agendar("Felipe",12345);
+            print_r($agenda);
         ?>
+        </pre>
+        
+        
+        
         
         
     </body>
